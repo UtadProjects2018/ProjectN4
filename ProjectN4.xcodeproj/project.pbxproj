@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13116EB82180BFEA00DC841D /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13116EB52180BFEA00DC841D /* Console.cpp */; };
+		13116EB92180BFEA00DC841D /* TEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13116EB62180BFEA00DC841D /* TEntity.cpp */; };
+		137FBDE32182147E00AC6774 /* libncurses.5.4.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 137FBDE22182147E00AC6774 /* libncurses.5.4.tbd */; };
 		13A3D5F8217F672100A8BD3D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13A3D5F7217F672100A8BD3D /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		13116EB42180BFEA00DC841D /* TEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEntity.h; sourceTree = "<group>"; };
+		13116EB52180BFEA00DC841D /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Console.cpp; sourceTree = "<group>"; };
+		13116EB62180BFEA00DC841D /* TEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TEntity.cpp; sourceTree = "<group>"; };
+		13116EB72180BFEA00DC841D /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
+		137FBDE02182145D00AC6774 /* libncurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.tbd; path = usr/lib/libncurses.tbd; sourceTree = SDKROOT; };
+		137FBDE22182147E00AC6774 /* libncurses.5.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.5.4.tbd; path = usr/lib/libncurses.5.4.tbd; sourceTree = SDKROOT; };
 		13A3D5F4217F672100A8BD3D /* ProjectN4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectN4; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A3D5F7217F672100A8BD3D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137FBDE32182147E00AC6774 /* libncurses.5.4.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		137FBDDF2182145D00AC6774 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				137FBDE22182147E00AC6774 /* libncurses.5.4.tbd */,
+				137FBDE02182145D00AC6774 /* libncurses.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		13A3D5EB217F672100A8BD3D = {
 			isa = PBXGroup;
 			children = (
 				13A3D5F6217F672100A8BD3D /* ProjectN4 */,
 				13A3D5F5217F672100A8BD3D /* Products */,
+				137FBDDF2182145D00AC6774 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +77,10 @@
 		13A3D5F6217F672100A8BD3D /* ProjectN4 */ = {
 			isa = PBXGroup;
 			children = (
+				13116EB62180BFEA00DC841D /* TEntity.cpp */,
+				13116EB42180BFEA00DC841D /* TEntity.h */,
+				13116EB52180BFEA00DC841D /* Console.cpp */,
+				13116EB72180BFEA00DC841D /* Console.h */,
 				13A3D5F7217F672100A8BD3D /* main.cpp */,
 			);
 			path = ProjectN4;
@@ -119,6 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A3D5F8217F672100A8BD3D /* main.cpp in Sources */,
+				13116EB82180BFEA00DC841D /* Console.cpp in Sources */,
+				13116EB92180BFEA00DC841D /* TEntity.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
