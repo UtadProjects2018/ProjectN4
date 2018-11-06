@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13116EB82180BFEA00DC841D /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13116EB52180BFEA00DC841D /* Console.cpp */; };
-		13116EB92180BFEA00DC841D /* TEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13116EB62180BFEA00DC841D /* TEntity.cpp */; };
 		137FBDE32182147E00AC6774 /* libncurses.5.4.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 137FBDE22182147E00AC6774 /* libncurses.5.4.tbd */; };
-		13A3D5F8217F672100A8BD3D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13A3D5F7217F672100A8BD3D /* main.cpp */; };
+		139AB3482191A65500B1282C /* AnimalGameWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 139AB3442191A65500B1282C /* AnimalGameWrapper.cpp */; };
+		139AB3492191A65500B1282C /* TEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 139AB3462191A65500B1282C /* TEntity.cpp */; };
+		139AB34C2191A6B800B1282C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 139AB34B2191A6B700B1282C /* main.cpp */; };
+		13F4D315218BBE7700DA3BEC /* MacConsole.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13F4D313218BBE7700DA3BEC /* MacConsole.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,14 +27,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		13116EB42180BFEA00DC841D /* TEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEntity.h; sourceTree = "<group>"; };
-		13116EB52180BFEA00DC841D /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Console.cpp; sourceTree = "<group>"; };
-		13116EB62180BFEA00DC841D /* TEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TEntity.cpp; sourceTree = "<group>"; };
-		13116EB72180BFEA00DC841D /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
 		137FBDE02182145D00AC6774 /* libncurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.tbd; path = usr/lib/libncurses.tbd; sourceTree = SDKROOT; };
 		137FBDE22182147E00AC6774 /* libncurses.5.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.5.4.tbd; path = usr/lib/libncurses.5.4.tbd; sourceTree = SDKROOT; };
+		139AB3442191A65500B1282C /* AnimalGameWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimalGameWrapper.cpp; sourceTree = "<group>"; };
+		139AB3452191A65500B1282C /* TEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEntity.h; sourceTree = "<group>"; };
+		139AB3462191A65500B1282C /* TEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TEntity.cpp; sourceTree = "<group>"; };
+		139AB3472191A65500B1282C /* AnimalGameWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimalGameWrapper.hpp; sourceTree = "<group>"; };
+		139AB34B2191A6B700B1282C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ProjectN4/main.cpp; sourceTree = "<group>"; };
 		13A3D5F4217F672100A8BD3D /* ProjectN4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectN4; sourceTree = BUILT_PRODUCTS_DIR; };
-		13A3D5F7217F672100A8BD3D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		13F4D308218B9DB900DA3BEC /* Console.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
+		13F4D30B218B9DB900DA3BEC /* WindowsConsole.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WindowsConsole.cpp; sourceTree = "<group>"; };
+		13F4D30C218B9DB900DA3BEC /* WindowsConsole.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WindowsConsole.hpp; sourceTree = "<group>"; };
+		13F4D313218BBE7700DA3BEC /* MacConsole.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MacConsole.cpp; sourceTree = "<group>"; };
+		13F4D314218BBE7700DA3BEC /* MacConsole.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MacConsole.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				13A3D5F6217F672100A8BD3D /* ProjectN4 */,
+				139AB34B2191A6B700B1282C /* main.cpp */,
 				13A3D5F5217F672100A8BD3D /* Products */,
 				137FBDDF2182145D00AC6774 /* Frameworks */,
 			);
@@ -77,13 +84,49 @@
 		13A3D5F6217F672100A8BD3D /* ProjectN4 */ = {
 			isa = PBXGroup;
 			children = (
-				13116EB62180BFEA00DC841D /* TEntity.cpp */,
-				13116EB42180BFEA00DC841D /* TEntity.h */,
-				13116EB52180BFEA00DC841D /* Console.cpp */,
-				13116EB72180BFEA00DC841D /* Console.h */,
-				13A3D5F7217F672100A8BD3D /* main.cpp */,
+				13F4D306218B9DB900DA3BEC /* Console */,
+				13F4D30D218B9DB900DA3BEC /* Entities */,
 			);
 			path = ProjectN4;
+			sourceTree = "<group>";
+		};
+		13F4D306218B9DB900DA3BEC /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				13F4D308218B9DB900DA3BEC /* Console.h */,
+				13F4D309218B9DB900DA3BEC /* Mac */,
+				13F4D30A218B9DB900DA3BEC /* Windows */,
+			);
+			path = Console;
+			sourceTree = "<group>";
+		};
+		13F4D309218B9DB900DA3BEC /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				13F4D313218BBE7700DA3BEC /* MacConsole.cpp */,
+				13F4D314218BBE7700DA3BEC /* MacConsole.hpp */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		13F4D30A218B9DB900DA3BEC /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				13F4D30B218B9DB900DA3BEC /* WindowsConsole.cpp */,
+				13F4D30C218B9DB900DA3BEC /* WindowsConsole.hpp */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+		13F4D30D218B9DB900DA3BEC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				139AB3442191A65500B1282C /* AnimalGameWrapper.cpp */,
+				139AB3472191A65500B1282C /* AnimalGameWrapper.hpp */,
+				139AB3462191A65500B1282C /* TEntity.cpp */,
+				139AB3452191A65500B1282C /* TEntity.h */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +185,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13A3D5F8217F672100A8BD3D /* main.cpp in Sources */,
-				13116EB82180BFEA00DC841D /* Console.cpp in Sources */,
-				13116EB92180BFEA00DC841D /* TEntity.cpp in Sources */,
+				13F4D315218BBE7700DA3BEC /* MacConsole.cpp in Sources */,
+				139AB3482191A65500B1282C /* AnimalGameWrapper.cpp in Sources */,
+				139AB34C2191A6B800B1282C /* main.cpp in Sources */,
+				139AB3492191A65500B1282C /* TEntity.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

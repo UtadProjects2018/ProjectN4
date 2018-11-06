@@ -8,8 +8,6 @@
 
 #include <iostream>
 #include "TEntity.h"
-#include "Console.h"
-
 
 #pragma mark - Constants
 
@@ -17,50 +15,59 @@ const int moveLimitX = 100;
 
 const int moveValueFor(const AnimalGame::AnimalType animalType)
 {
+    int animalPositionX = 0;
     switch (animalType)
     {
         case AnimalGame::Horse:
-            return 10;
+            animalPositionX = 2;
+            break;
             
         case AnimalGame::Turtle:
-            return 10;
+            animalPositionX = 5;
+            break;
             
         case AnimalGame::Elephant:
-            return 10;
+            animalPositionX = 1;
+            break;
     }
+    
+    return animalPositionX;
 }
 
-#pragma mark - Impl
+#pragma mark - Implementation
 
-void AnimalGame::moveAnimal(AnimalGame::TEntity *animal)
+void AnimalGame::moveAnimal(AnimalGame::TEntity *animal, ConsoleManager::Console *console)
 {
     if(animal->m_ix == moveLimitX)
     {
-        // Resetea la posición
         animal->m_ix = 0;
     }
     
     animal->m_ix += moveValueFor(animal->animalType);
-    ConsoleManager::gotoxy(animal->m_ix, animal->m_iy);
+    console->gotoxy(animal->m_ix, animal->m_iy);
 }
 
-void AnimalGame::drawAnimal(AnimalGame::TEntity *animal)
+void AnimalGame::drawAnimal(AnimalGame::TEntity *animal, ConsoleManager::Console *console)
 {
+    const char *animalEmoji;
     switch (animal->animalType)
     {
         case Horse:
-            printf("CCC");
+            animalEmoji = "CCC";
             break;
             
         case Turtle:
-            printf("TTT");
+            animalEmoji = "TTT";
             break;
             
         case Elephant:
-            printf("EEE");
+            animalEmoji = "EEE";
             break;
             
         default:
             break;
     }
+    
+    console->draw(animalEmoji);
 }
+

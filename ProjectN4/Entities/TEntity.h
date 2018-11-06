@@ -6,6 +6,11 @@
 //  Copyright © 2018 Ingrid Guerrero. All rights reserved.
 //
 
+#ifndef TEntity_hpp
+#define TEntity_hpp
+#include "Console.h"
+#endif
+
 namespace AnimalGame
 {
     enum AnimalType
@@ -17,7 +22,7 @@ namespace AnimalGame
     
     struct TEntity
     {
-        typedef void (*funcEntity)(TEntity *);
+        typedef void (*funcEntity)(TEntity *, ConsoleManager::Console *);
         int m_ix;
         int m_iy;
         funcEntity *m_funcs;
@@ -33,7 +38,7 @@ namespace AnimalGame
         }
     };
     
-    void moveAnimal(TEntity *animal);
-    void drawAnimal(TEntity *animal);
+    void moveAnimal(TEntity *animal, ConsoleManager::Console *console);
+    void drawAnimal(TEntity *animal, ConsoleManager::Console *console);
 }
 
