@@ -16,6 +16,7 @@ namespace ConsoleManager {
     {
     public:
         WindowsConsole() {};
+        ~WindowsConsole() {};
         void gotoxy (int x, int y);
         void hidecursor (void);
         void clear ();

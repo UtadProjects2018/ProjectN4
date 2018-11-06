@@ -25,6 +25,7 @@ static const char *elephantID = "EEE";
 ConsoleManager::MacConsole::MacConsole()
 {
     hidecursor();
+    printf("\033[%dA", 10);
 }
 
 void ConsoleManager::MacConsole::gotoxy(int x, int y) 

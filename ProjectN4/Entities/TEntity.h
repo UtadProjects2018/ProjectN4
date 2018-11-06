@@ -22,7 +22,7 @@ namespace AnimalGame
     
     struct TEntity
     {
-        typedef void (*funcEntity)(TEntity *, ConsoleManager::Console *);
+        typedef void (*funcEntity)(TEntity *, void (*console)(int, int, const char*));
         int m_ix;
         int m_iy;
         funcEntity *m_funcs;
@@ -38,7 +38,7 @@ namespace AnimalGame
         }
     };
     
-    void moveAnimal(TEntity *animal, ConsoleManager::Console *console);
-    void drawAnimal(TEntity *animal, ConsoleManager::Console *console);
+    void moveAnimal(TEntity *animal, void (*console)(int, int, const char*));
+    void drawAnimal(TEntity *animal, void (*console)(int, int, const char*));
 }
 

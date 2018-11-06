@@ -14,6 +14,7 @@ namespace ConsoleManager
     {
     public:
         Console() {};
+        virtual ~Console() {};
         virtual void gotoxy (int x, int y) = 0;
         virtual void draw (const char *emoji) = 0;
         virtual void hidecursor (void) = 0;

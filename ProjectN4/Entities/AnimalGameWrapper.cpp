@@ -16,6 +16,18 @@
 #include "MacConsole.hpp"
 #endif
 
+ConsoleManager::Console* pConsole;
+
+void printConsoleCursor(int x, int y, const char *emoji)
+{
+    pConsole->gotoxy(x, y);
+}
+
+void drawConsoleCursor(int x, int y, const char *emoji)
+{
+    pConsole->draw(emoji);
+}
+
 void AnimalGame::startGame()
 {
     AnimalGame::TEntity::funcEntity functions[] = {&AnimalGame::drawAnimal, &AnimalGame::moveAnimal};
@@ -26,13 +38,14 @@ void AnimalGame::startGame()
     
     AnimalGame::TEntity *animals[] = {horse, turtle, elephant};
     
-    ConsoleManager::Console* pConsole;
-
 #ifdef _WIN32
     pConsole = new ConsoleManager::WindowsConsole();
 #elif __APPLE__
     pConsole = new ConsoleManager::MacConsole();
 #endif
+    
+    void (*consolePrint)(int, int, const char *) = &printConsoleCursor;
+    void (*consoleDraw) (int, int, const char *) = &drawConsoleCursor;
     
     while (true)
     {
@@ -40,8 +53,8 @@ void AnimalGame::startGame()
         
         for (TEntity *animal : animals)
         {
-            animal->m_funcs[0](animal, pConsole);
-            animal->m_funcs[1](animal, pConsole);
+            animal->m_funcs[0](animal, consoleDraw);
+            animal->m_funcs[1](animal, consolePrint);
         }
         
         pConsole->sleep();

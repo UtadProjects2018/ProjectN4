@@ -36,7 +36,7 @@ const int moveValueFor(const AnimalGame::AnimalType animalType)
 
 #pragma mark - Implementation
 
-void AnimalGame::moveAnimal(AnimalGame::TEntity *animal, ConsoleManager::Console *console)
+void AnimalGame::moveAnimal(AnimalGame::TEntity *animal, void (*console)(int, int, const char*))
 {
     if(animal->m_ix == moveLimitX)
     {
@@ -44,10 +44,10 @@ void AnimalGame::moveAnimal(AnimalGame::TEntity *animal, ConsoleManager::Console
     }
     
     animal->m_ix += moveValueFor(animal->animalType);
-    console->gotoxy(animal->m_ix, animal->m_iy);
+    (*console)(animal->m_ix, animal->m_iy, "");
 }
 
-void AnimalGame::drawAnimal(AnimalGame::TEntity *animal, ConsoleManager::Console *console)
+void AnimalGame::drawAnimal(AnimalGame::TEntity *animal, void (*console)(int, int, const char*))
 {
     const char *animalEmoji;
     switch (animal->animalType)
@@ -67,7 +67,6 @@ void AnimalGame::drawAnimal(AnimalGame::TEntity *animal, ConsoleManager::Console
         default:
             break;
     }
-    
-    console->draw(animalEmoji);
+    (*console)(animal->m_ix, animal->m_iy, animalEmoji);
 }
 

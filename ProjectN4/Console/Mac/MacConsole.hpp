@@ -17,6 +17,7 @@ namespace ConsoleManager {
     {
     public:
         MacConsole();
+        ~MacConsole() {};
         void gotoxy (int x, int y);
         void hidecursor (void);
         void clear ();
