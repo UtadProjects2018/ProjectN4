@@ -8,7 +8,8 @@
 
 #ifndef TEntity_hpp
 #define TEntity_hpp
-#include "Console.h"
+// TODO: Including the path so VS Can find the header file, in Xcode this error doesn't happen. 
+#include "../Console/Console.h"
 #endif
 
 namespace AnimalGame

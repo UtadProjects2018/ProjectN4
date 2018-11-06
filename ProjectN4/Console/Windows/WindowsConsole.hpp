@@ -8,7 +8,8 @@
 
 #ifndef WindowsConsole_hpp
 #define WindowsConsole_hpp
-#include "Console.h"
+// TODO: Including the path so VS Can find the header file, in Xcode this error doesn't happen. 
+#include "../Console.h"
 #endif
 
 namespace ConsoleManager {
@@ -21,5 +22,6 @@ namespace ConsoleManager {
         void hidecursor (void);
         void clear ();
         void sleep ();
+		void draw(const char *emoji);
     };
 }

@@ -8,7 +8,8 @@
 
 #ifndef MacConsole_hpp
 #define MacConsole_hpp
-#include "Console.h"
+// TODO: Including the path so VS Can find the header file, in Xcode this error doesn't happen. 
+#include "../Console.h"
 #endif /* MacConsole_hpp */
 
 

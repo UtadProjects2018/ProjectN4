@@ -6,7 +6,7 @@
 //  Copyright © 2018 Ingrid Guerrero. All rights reserved.
 //
 
-#include "AnimalGameWrapper.hpp"
+#include "Entities/AnimalGameWrapper.hpp"
 
 int main(int argc, const char * argv[])
 {

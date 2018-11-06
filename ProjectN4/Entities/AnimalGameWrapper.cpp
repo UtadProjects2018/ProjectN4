@@ -11,7 +11,7 @@
 #include "TEntity.h"
 
 #ifdef _WIN32
-#include "WindowsConsole.hpp"
+#include "../Console/Windows/WindowsConsole.hpp"
 #elif __APPLE__
 #include "MacConsole.hpp"
 #endif

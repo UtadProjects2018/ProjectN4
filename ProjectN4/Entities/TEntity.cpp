@@ -9,6 +9,8 @@
 #include <iostream>
 #include "TEntity.h"
 
+#pragma warning (disable: 4068)
+// TODO: this pragma mark is only available for Xcode Mac, it usefull for separate the code (i hate Windows VS!!!)
 #pragma mark - Constants
 
 const int moveLimitX = 100;
@@ -49,7 +51,7 @@ void AnimalGame::moveAnimal(AnimalGame::TEntity *animal, void (*console)(int, in
 
 void AnimalGame::drawAnimal(AnimalGame::TEntity *animal, void (*console)(int, int, const char*))
 {
-    const char *animalEmoji;
+    const char *animalEmoji = "";
     switch (animal->animalType)
     {
         case Horse:
